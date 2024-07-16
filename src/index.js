@@ -11,13 +11,13 @@ const ALL_TOOLS = new Set([
   'ellipse',
   'freehand',
   'line',
-  // 'multipolygon' // exclude from defaults for now
+  'multipolygon' // exclude from defaults for now
 ]);
 
 const SelectorPack = (anno, config) => {
 
   // Add configured tools, or all
-  const tools = config?.tools ? 
+  const tools = config?.tools ?
     config.tools.map(t => t.toLowerCase()) : ALL_TOOLS;
 
   tools.forEach(tool => {
@@ -29,7 +29,7 @@ const SelectorPack = (anno, config) => {
 
     if (tool === 'ellipse')
       anno.addDrawingTool(RubberbandEllipseTool);
-  
+
     if (tool === 'freehand')
       anno.addDrawingTool(RubberbandFreehandTool);
 
