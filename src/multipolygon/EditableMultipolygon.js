@@ -204,6 +204,7 @@ export default class EditableMultipolygon extends EditableShape {
       this.selected = []
 
       this.setPoints(updatedPoints);
+      this.emit('update', toSVGTarget(getPoints(this.shape), this.env.image));
     }
   }
 
@@ -307,7 +308,7 @@ export default class EditableMultipolygon extends EditableShape {
   }
 
   onKeyDown = ({ which }) => {
-    if (which === 46) {
+    if (which === 88) {
       this.deleteSelected();
     }
   }
