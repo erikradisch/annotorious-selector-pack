@@ -1,0 +1,98 @@
+/** Rubberband **/
+.a9s-selection.segment-anything .a9s-rubberband {
+  fill:rgba(255,255,255,0.15);
+  stroke-width:1px;
+  stroke:rgba(0, 0, 0, 0.3);
+}
+
+/** Polygon **/
+.a9s-selection.segment-anything .a9s-inner,
+.a9s-annotation.segment-anything.editable .a9s-inner {
+  path {
+    fill:rgba(0,128,0,0.55);
+    stroke-width:2px;
+    stroke:white;
+    stroke-dasharray:5 3;
+  }
+}
+
+.a9s-handle .add{
+color: green;
+}
+.a9s-handle .remove{
+color: red;
+}
+.segment-anything-mask {
+  path {
+    fill:rgba(0,128,0,0.55)!important;
+    stroke: 1px!important;
+    stroke: gold!important;;
+  }
+}
+.a9s-annotation.segment-anything.editable .a9s-inner:hover {
+  fill:transparent;
+}
+
+.a9s-selection.segment-anything .a9s-outer,
+.a9s-annotation.segment-anything.editable .a9s-outer {
+  fill:rgba(0,128,0,0.55)!important;
+  stroke-width:2px;
+  stroke:white;
+  stroke-dasharray:5 3;
+  color: green;
+}
+
+/** Corner handles **/
+.a9s-handle.add {
+  g {
+    .a9s-handle-inner {
+      stroke-width:1;
+      stroke:gold;
+      fill: green;
+    }
+  }
+}
+.a9s-handle.remove {
+  g {
+    .a9s-handle-inner {
+      stroke-width:1;
+      stroke:gold;
+      fill: red;
+    }
+  }
+}
+.a9s-selection.segment-anything .a9s-handle .a9s-handle-outer,
+.a9s-annotation.segment-anything.editable .a9s-handle .a9s-handle-outer {
+  stroke-width:1;
+  stroke:#000;
+  color: green;
+}
+
+.a9s-selection.segment-anything .a9s-handle .a9s-handle-inner,
+.a9s-annotation.segment-anything.editable .a9s-handle .a9s-handle-inner {
+  stroke-width:2;
+  stroke:gold;
+  fill:#000;
+}
+
+.a9s-selection.segment-anything .a9s-handle .a9s-handle-inner:hover,
+.a9s-annotation.segment-anything.editable .a9s-handle.selected .a9s-handle-inner,
+.a9s-annotation.segment-anything.editable .a9s-handle .a9s-handle-inner:hover {
+  fill:#fff;
+}
+
+/** Midpoints **/
+.a9s-annotation.segment-anything.editable .a9s-midpoint {
+  display:none;
+  fill:rgba(255,255,255,0.65);
+  stroke-width:1;
+  stroke:rgba(0,0,0,0.65);
+}
+
+.a9s-annotation.segment-anything.editable:hover .a9s-midpoint {
+  display:block;
+}
+
+.a9s-annotation.segment-anything.editable .a9s-midpoint:hover {
+  fill:#fff;
+}

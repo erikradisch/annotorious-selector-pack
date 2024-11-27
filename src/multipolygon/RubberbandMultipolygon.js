@@ -174,7 +174,9 @@ export default class RubberbandMultipolygon extends ToolLike  {
     this.group = null;
   }
   toSelection = () => {
-    return new Selection(toSVGTarget(this.group, this.env.image));
+    return new Selection({...toSVGTarget(this.group, this.env.image), renderedVia: {
+      name: 'multipolygon'
+    }});
   }
 
 }
